@@ -8,21 +8,42 @@ import (
 )
 
 func main() {
-	// Confirmation of ini operation
+	// // Confirmation of ini operation
 	// fmt.Println(config.Config.Port)
 	// fmt.Println(config.Config.SQLDriver)
 	// fmt.Println(config.Config.DbName)
 	// fmt.Println(config.Config.LogFile)
-
 	// log.Println("test")
 
+	// Exec init() to create tables
 	fmt.Println(models.Db)
 
+	// Create a test user
 	u := &models.User{}
 	u.Name = "test"
 	u.Email = "test@example.com"
 	u.Password = "testpassword"
 	fmt.Println(u)
-
 	u.CreateUser()
+
+	// // Get a user
+	// u, _ := models.GetUser(1)
+	// fmt.Println(u)
+
+	// // Update a user
+	// u.Name = "Test"
+	// u.Email = "Test@example.com"
+	// u.UpdateUser()
+	// u, _ = models.GetUser(1)
+	// fmt.Println(u)
+
+	// // Delete a user
+	// // NOTE: No need to specify u.ID in delete method because u holds user with ID = 1
+	// u.DeleteUser()
+	// u, _ = models.GetUser(1)
+	// fmt.Println(u)
+
+	// Create a todo
+	user, _ := models.GetUser(2)
+	user.CreateTodo("First Todo")
 }
