@@ -18,13 +18,13 @@ func main() {
 	// Exec init() to create tables
 	fmt.Println(models.Db)
 
-	// Create a test user
-	u := &models.User{}
-	u.Name = "test"
-	u.Email = "test@example.com"
-	u.Password = "testpassword"
-	fmt.Println(u)
-	u.CreateUser()
+	// // Create a test user
+	// u := &models.User{}
+	// u.Name = "test"
+	// u.Email = "test@example.com"
+	// u.Password = "testpassword"
+	// fmt.Println(u)
+	// u.CreateUser()
 
 	// // Get a user
 	// u, _ := models.GetUser(1)
@@ -43,7 +43,24 @@ func main() {
 	// u, _ = models.GetUser(1)
 	// fmt.Println(u)
 
-	// Create a todo
+	// // Create a todo
+	// user, _ := models.GetUser(2)
+	// user.CreateTodo("Second Todo")
+
+	// // Get a todo
+	// t, _ := models.GetTodo(1)
+	// fmt.Println(t)
+
+	// // Get all todos
+	// todos, _ := models.GetTodos()
+	// for _, v := range todos {
+	// 	fmt.Println(v)
+	// }
+
+	// Get all todo's of a user
 	user, _ := models.GetUser(2)
-	user.CreateTodo("First Todo")
+	todos, _ := user.GetTodosByUser()
+	for _, v := range todos {
+		fmt.Println(v)
+	}
 }
