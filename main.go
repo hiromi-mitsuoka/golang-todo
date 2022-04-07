@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	// モジュールモードでの内部パッケージのimportの記述(https://qiita.com/fetaro/items/31b02b940ce9ec579baf#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E3%81%AE%E5%86%85%E9%83%A8%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AEimport)
+	"github.com/hiromi-mitsuoka/golang-todo/app/controllers"
 	"github.com/hiromi-mitsuoka/golang-todo/app/models"
 )
 
@@ -57,10 +58,37 @@ func main() {
 	// 	fmt.Println(v)
 	// }
 
-	// Get all todo's of a user
-	user, _ := models.GetUser(2)
-	todos, _ := user.GetTodosByUser()
-	for _, v := range todos {
-		fmt.Println(v)
-	}
+	// // Get all todo's of a user
+	// user, _ := models.GetUser(2)
+	// todos, _ := user.GetTodosByUser()
+	// for _, v := range todos {
+	// 	fmt.Println(v)
+	// }
+
+	// // Update a todo
+	// t, _ := models.GetTodo(1)
+	// t.Content = "Update Todo"
+	// t.UpdateTodo()
+
+	// // Delete a todo
+	// t, _ := models.GetTodo(2)
+	// t.DeleteTodo()
+
+	// Start server
+	controllers.StartMainServer()
+
+	// // Get a user with email
+	// user, _ := models.GetUserByEmail("test@example.com")
+	// fmt.Println(user)
+
+	// // Create a session
+	// session, err := user.CreateSession()
+	// if err != nil {
+	// 	log.Println(err)
+	// }
+	// fmt.Println(session)
+
+	// // Check a session
+	// valid, _ := session.CheckSession()
+	// fmt.Println(valid)
 }

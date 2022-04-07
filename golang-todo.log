@@ -1,3 +1,465 @@
 2022/04/04 22:31:32 main.go:17: test
 2022/04/05 07:53:12 users.go:36: near "value": syntax error
 2022/04/05 07:54:38 users.go:36: near "value": syntax error
+2022/04/07 14:46:00 server.go:3197: http: panic serving [::1]:54567: template: login.html:15: unexpected EOF
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011b1c0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140001920e0}, {0x0, 0x0}, {0x1400024b9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140001920e0?}, 0x1400024ba3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140001920e0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140001920e0}, 0x1400025a200)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000094030?}, {0x10141d7b0, 0x140001920e0}, 0x1400025a200)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139400, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:00 server.go:3197: http: panic serving [::1]:54568: template: login.html:15: unexpected EOF
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011b370})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140001921c0}, {0x0, 0x0}, {0x1400005f9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140001921c0?}, 0x1400005fa3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140001921c0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140001921c0}, 0x14000182100)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x1400011d680?}, {0x10141d7b0, 0x140001921c0}, 0x14000182100)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140001394a0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:00 server.go:3197: http: panic serving [::1]:54569: template: login.html:15: unexpected EOF
+goroutine 42 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400021a570})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x1400021e1c0}, {0x0, 0x0}, {0x140002669c8?, 0x3, 0x140002669f8?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x1400021e1c0?}, 0x14000266a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x20?, {0x10141d7b0?, 0x1400021e1c0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x1400021e1c0}, 0x1400025a300)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000207b00?}, {0x10141d7b0, 0x1400021e1c0}, 0x1400025a300)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000250280, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:01 server.go:3197: http: panic serving [::1]:54570: template: login.html:15: unexpected EOF
+goroutine 30 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011b530})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140001922a0}, {0x0, 0x0}, {0x140002669c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140001922a0?}, 0x14000266a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140001922a0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140001922a0}, 0x1400025a600)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x1400026a240?}, {0x10141d7b0, 0x140001922a0}, 0x1400025a600)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139540, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:01 server.go:3197: http: panic serving [::1]:54571: template: login.html:15: unexpected EOF
+goroutine 31 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x14000012130})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x14000192380}, {0x0, 0x0}, {0x1400005f9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x14000192380?}, 0x1400005fa3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x14000192380?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x14000192380}, 0x14000182400)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140001bc5d0?}, {0x10141d7b0, 0x14000192380}, 0x14000182400)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140001395e0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:01 server.go:3197: http: panic serving [::1]:54572: template: login.html:15: unexpected EOF
+goroutine 54 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011b790})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x14000192460}, {0x0, 0x0}, {0x1400005f9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x14000192460?}, 0x1400005fa3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x14000192460?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x14000192460}, 0x14000182700)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140001bd080?}, {0x10141d7b0, 0x14000192460}, 0x14000182700)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139680, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:06 server.go:3197: http: panic serving [::1]:54573: template: login.html:15: unexpected EOF
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011b8b0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b2000}, {0x0, 0x0}, {0x1400005f9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b2000?}, 0x1400005fa3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b2000?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b2000}, 0x14000182900)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140001bd7a0?}, {0x10141d7b0, 0x140002b2000}, 0x14000182900)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140002a8000, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:06 server.go:3197: http: panic serving [::1]:54574: template: login.html:15: unexpected EOF
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011ba60})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x14000192540}, {0x0, 0x0}, {0x140000609c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x14000192540?}, 0x14000060a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x14000192540?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x14000192540}, 0x140002aa000)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000076480?}, {0x10141d7b0, 0x14000192540}, 0x140002aa000)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140002a80a0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:06 server.go:3197: http: panic serving [::1]:54575: template: login.html:15: unexpected EOF
+goroutine 47 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400021a740})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x1400021e2a0}, {0x0, 0x0}, {0x140002679c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x1400021e2a0?}, 0x14000267a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x1400021e2a0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x1400021e2a0}, 0x1400025a700)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x1400026a300?}, {0x10141d7b0, 0x1400021e2a0}, 0x1400025a700)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000250320, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:23 server.go:3197: http: panic serving [::1]:54579: template: login.html:15: unexpected EOF
+goroutine 65 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x140000122e0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140001927e0}, {0x0, 0x0}, {0x1400024b9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140001927e0?}, 0x1400024ba3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140001927e0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140001927e0}, 0x14000182c00)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x1400026aa50?}, {0x10141d7b0, 0x140001927e0}, 0x14000182c00)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139720, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:23 server.go:3197: http: panic serving [::1]:54580: template: login.html:15: unexpected EOF
+goroutine 82 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400021a7f0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b20e0}, {0x0, 0x0}, {0x140000609c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b20e0?}, 0x14000060a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b20e0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b20e0}, 0x14000182b00)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140001fe330?}, {0x10141d7b0, 0x140002b20e0}, 0x14000182b00)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140001397c0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:23 server.go:3197: http: panic serving [::1]:54581: template: login.html:15: unexpected EOF
+goroutine 16 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x140000125b0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b21c0}, {0x0, 0x0}, {0x140000609c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b21c0?}, 0x14000060a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b21c0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b21c0}, 0x140002aa200)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140000770e0?}, {0x10141d7b0, 0x140002b21c0}, 0x140002aa200)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140002a8140, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:24 server.go:3197: http: panic serving [::1]:54582: template: login.html:15: unexpected EOF
+goroutine 69 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x140000126c0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140001928c0}, {0x0, 0x0}, {0x140000609c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140001928c0?}, 0x14000060a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140001928c0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140001928c0}, 0x140002aa300)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000077800?}, {0x10141d7b0, 0x140001928c0}, 0x140002aa300)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140002503c0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:24 server.go:3197: http: panic serving [::1]:54583: template: login.html:15: unexpected EOF
+goroutine 70 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400011be90})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b22a0}, {0x0, 0x0}, {0x140002689c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b22a0?}, 0x14000268a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b22a0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b22a0}, 0x1400025aa00)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x1400026ad20?}, {0x10141d7b0, 0x140002b22a0}, 0x1400025aa00)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000250460, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:24 server.go:3197: http: panic serving [::1]:54584: template: login.html:15: unexpected EOF
+goroutine 93 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x14000356050})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140001929a0}, {0x0, 0x0}, {0x140000609c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140001929a0?}, 0x14000060a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140001929a0?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140001929a0}, 0x14000182e00)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140001ffb00?}, {0x10141d7b0, 0x140001929a0}, 0x14000182e00)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140001399a0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:29 server.go:3197: http: panic serving [::1]:54585: template: login.html:15: unexpected EOF
+goroutine 114 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400021a900})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x14000192a80}, {0x0, 0x0}, {0x140002689c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x14000192a80?}, 0x14000268a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x14000192a80?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x14000192a80}, 0x140002aa500)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000077f20?}, {0x10141d7b0, 0x14000192a80}, 0x140002aa500)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139a40, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:29 server.go:3197: http: panic serving [::1]:54586: template: login.html:15: unexpected EOF
+goroutine 115 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400021aab0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x1400021e380}, {0x0, 0x0}, {0x140000609c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x1400021e380?}, 0x14000060a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x1400021e380?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x1400021e380}, 0x14000183000)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000354300?}, {0x10141d7b0, 0x1400021e380}, 0x14000183000)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139ae0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:29 server.go:3197: http: panic serving [::1]:54587: template: login.html:15: unexpected EOF
+goroutine 118 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x140003562d0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x14000192b60}, {0x0, 0x0}, {0x140002689c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x14000192b60?}, 0x14000268a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x14000192b60?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x14000192b60}, 0x14000183200)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140003547b0?}, {0x10141d7b0, 0x14000192b60}, 0x14000183200)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139b80, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:59 server.go:3197: http: panic serving [::1]:54598: template: login.html:15: unexpected EOF
+goroutine 123 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x1400021abd0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b2380}, {0x0, 0x0}, {0x1400005f9c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b2380?}, 0x1400005fa3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b2380?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b2380}, 0x140002aa600)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000077f80?}, {0x10141d7b0, 0x140002b2380}, 0x140002aa600)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139c20, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:59 server.go:3197: http: panic serving [::1]:54599: template: login.html:15: unexpected EOF
+goroutine 124 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x140000129d0})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b2460}, {0x0, 0x0}, {0x140002689c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b2460?}, 0x14000268a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b2460?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b2460}, 0x14000183400)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x14000354f90?}, {0x10141d7b0, 0x140002b2460}, 0x14000183400)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x14000139cc0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450
+2022/04/07 14:46:59 server.go:3197: http: panic serving [::1]:54600: template: login.html:15: unexpected EOF
+goroutine 112 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xb0
+panic({0x1013c0d20, 0x14000012b90})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:374
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.generateHTML({0x10141d7b0?, 0x140002b2540}, {0x0, 0x0}, {0x140002689c8?, 0x3, 0x0?})
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/server.go:18 +0xd0
+github.com/hiromi-mitsuoka/golang-todo/app/controllers.login({0x10141d7b0?, 0x140002b2540?}, 0x14000268a3b?)
+	/Users/hiromi.mitsuoka/Documents/apps/golang-todo/app/controllers/route_auth.go:33 +0x84
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x10141d7b0?, 0x140002b2540?}, 0x100eed190?)
+	/usr/local/go/src/net/http/server.go:2084 +0x3c
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10141d7b0, 0x140002b2540}, 0x140002aa900)
+	/usr/local/go/src/net/http/server.go:2462 +0x144
+net/http.serverHandler.ServeHTTP({0x140002f0a20?}, {0x10141d7b0, 0x140002b2540}, 0x140002aa900)
+	/usr/local/go/src/net/http/server.go:2916 +0x3fc
+net/http.(*conn).serve(0x140002a81e0, {0x10141da08, 0x1400011d530})
+	/usr/local/go/src/net/http/server.go:1966 +0x56c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x450

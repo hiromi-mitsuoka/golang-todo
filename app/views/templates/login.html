@@ -1,0 +1,15 @@
+{{define "content"}}
+<h1>login</h1>
+<form role="form" action="/authenticate" method="post">
+    <h2>
+        <i>
+            Sample
+        </i>
+    </h2>
+    <input type="email" name="email" placeholder="email" required autofocus>
+    <input type="password" name="password" placeholder="password">
+    <button type="submit">Login</button>
+    <br>
+    <a href="/signup">Registration</a>
+</form>
+{{end}}

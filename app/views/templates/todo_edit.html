@@ -1,0 +1,12 @@
+{{define "content"}}
+{{.Content}}
+
+<form role="form" action="/todos/update/{{.ID}}" method="post">
+    <div>Update</div>
+    <div>
+        <textarea name="content" id="content" rows="4" placeholder="update content">{{.Content}}</textarea>
+        <br>
+        <button type="submit">Update</button>
+    </div>
+</form>
+{{end}}
